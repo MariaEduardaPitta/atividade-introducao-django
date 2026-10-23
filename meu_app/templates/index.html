@@ -11,9 +11,21 @@
 <body>
     <main>
         <h1>Minha primeira página com Django!</h1>
-        <p>Atividade de Introdução ao Django</p>
         <p>Disciplina: Projeto de Software</p>
-        <p>Projeto desenvolvido com Python, HTML e CSS.</p>
+
+        <h2>Meus livros favoritos</h2>
+        <ol>
+            {% for livro in livros %}
+                <li>{{ livro.titulo }}</li>
+            {% endfor %}
+        </ol>
+
+        <h2>Atividades que gosto de fazer</h2>
+        <ul>
+            {% for atividade in atividades %}
+                <li>{{ atividade.titulo }}</li>
+            {% endfor %}
+        </ul>
     </main>
 </body>
 </html>
