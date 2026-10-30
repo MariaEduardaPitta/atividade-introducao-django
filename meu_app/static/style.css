@@ -24,3 +24,18 @@ p {
     color: #555;
     font-size: 17px;
 }
+img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+h2 {
+    color: #4A148C;
+    margin-top: 30px;
+}
+
+ol, ul {
+    text-align: left;
+    color: #555;
+}
