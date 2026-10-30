@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Login de usuário</title>
+</head>
+<body>
+    <h1>Entrar na conta</h1>
+
+    {% if erro %}
+        <p>{{ erro }}</p>
+    {% endif %}
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <label>Nome de usuário:</label>
+        <input type="text" name="username" required>
+
+        <label>Senha:</label>
+        <input type="password" name="password" required>
+
+        <button type="submit">Entrar</button>
+    </form>
+
+    <p>Não tem uma conta? <a href="{% url 'registro' %}">Cadastre-se</a></p>
+</body>
+</html>
